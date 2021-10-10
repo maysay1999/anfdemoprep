@@ -151,6 +151,7 @@
               "name": "ipconfig1",
               "properties": {
                 "privateIPAllocationMethod": "Static",
+                "privateIPAddress": "192.168.81.4",
                 "subnet": {
                   "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', variables('virtualNetworkName'), variables('subnetName'))]"
                 }
