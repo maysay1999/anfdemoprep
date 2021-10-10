@@ -282,7 +282,6 @@
         "name": "[parameters('networkinterfacename')]",
         "location": "[parameters('location')]",
         "dependsOn": [
-          "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicipvmname'))]",
           "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('vnetname'), 'mySubnet')]",
           "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('nsgname'))]"
         ],
@@ -293,9 +292,6 @@
               "properties": {
                 "privateIPAddress": "192.168.0.4",
                 "privateIPAllocationMethod": "Dynamic",
-                "publicIPAddress": {
-                  "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('publicipvmname'))]"
-                },
                 "subnet": {
                   "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('vnetname'), 'mySubnet')]"
                 },
