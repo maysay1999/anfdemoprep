@@ -216,10 +216,5 @@
           "[resourceId('Microsoft.Storage/storageAccounts', variables('storageAccountName'))]"
         ]
       }
-    ],
-    "outputs": {
-      "hostname": {
-        "type": "string"
-      }
-    }
+    ]
   }
