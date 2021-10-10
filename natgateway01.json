@@ -149,7 +149,6 @@
           "name": "Standard"
         },
         "properties": {
-          "prefixLength": 32,
           "publicIPAddressVersion": "IPv4"
         }
       },
