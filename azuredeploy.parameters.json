@@ -1,0 +1,45 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "vmname": {
+      "value": "winpdcVM"
+    },
+    "vmsize": {
+      "value": "Standard_D2s_v3"
+    },
+    "vnetname": {
+      "value": "winpdc-vnet"
+    },
+    "subnetname": {
+      "value": "winpdc-sub"
+    },
+    "vnetaddressspace": {
+      "value": "192.168.80.0/20"
+    },
+    "vnetsubnetprefix": {
+      "value": "192.168.81.0/24"
+    },
+    "natgatewayname": {
+      "value": "winpdcNATgateway"
+    },
+    "networkinterfacename": {
+      "value": "winpdcvmNIC"
+    },
+    "publicipname": {
+      "value": "winpdcPublicIP"
+    },
+    "nsgname": {
+      "value": "winpdcVMnsg"
+    },
+    "adminusername": {
+      "value": null
+    },
+    "adminpassword": {
+      "value": null
+    },
+    "location": {
+      "value": "[resourceGroup().location]"
+    }
+  }
+}
