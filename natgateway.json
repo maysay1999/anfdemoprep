@@ -80,6 +80,7 @@
       }
     },
     "adminpassword": {
+      "defaultValue": "Himistsu#12345",
       "type": "secureString",
       "metadata": {
         "description": "Administrator password for virtual machine"
@@ -263,8 +264,8 @@
           {
             "name": "ipconfig1",
             "properties": {
-              "privateIPAddress": "192.168.81.4",
-              "privateIPAllocationMethod": "Dynamic",
+              "privateIPAddress": "192.168.81.88",
+              "privateIPAllocationMethod": "Static",
               "subnet": {
                 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('vnetname'), 'mySubnet')]"
               },
