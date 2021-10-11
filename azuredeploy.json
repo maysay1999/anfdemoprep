@@ -3,7 +3,7 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
       "vmname": {
-        "defaultValue": "myVM",
+        "defaultValue": "winpdcVM",
         "type": "String",
         "metadata": {
           "description": "Name of the virtual machine"
@@ -17,14 +17,14 @@
         }
       },
       "vnetname": {
-        "defaultValue": "myVnet",
+        "defaultValue": "winpdc-vnet",
         "type": "String",
         "metadata": {
           "description": "Name of the virtual network"
         }
       },
       "subnetname": {
-        "defaultValue": "mySubnet",
+        "defaultValue": "winpdc-sub",
         "type": "String",
         "metadata": {
           "description": "Name of the subnet for virtual network"
@@ -45,28 +45,28 @@
         }
       },
       "natgatewayname": {
-        "defaultValue": "myNATgateway",
+        "defaultValue": "winpdcNATgateway",
         "type": "String",
         "metadata": {
           "description": "Name of the NAT gateway"
         }
       },
       "networkinterfacename": {
-        "defaultValue": "myvmNIC",
+        "defaultValue": "winpdcvmNIC",
         "type": "String",
         "metadata": {
           "description": "Name of the virtual machine nic"
         }
       },
       "publicipname": {
-        "defaultValue": "myPublicIP",
+        "defaultValue": "winpdcPublicIP",
         "type": "String",
         "metadata": {
           "description": "Name of the NAT gateway public IP"
         }
       },
       "nsgname": {
-        "defaultValue": "myVMnsg",
+        "defaultValue": "winpdcVMnsg",
         "type": "String",
         "metadata": {
           "description": "Name of the virtual machine NSG"
