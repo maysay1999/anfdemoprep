@@ -201,7 +201,7 @@
               "managedDisk": {
                 "storageAccountType": "Premium_LRS"
               },
-              "diskSizeGB": 40
+              "diskSizeGB": 128
             }
           },
           "osProfile": {
