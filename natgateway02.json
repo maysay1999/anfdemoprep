@@ -208,10 +208,15 @@
             "computerName": "[parameters('vmname')]",
             "adminUsername": "[parameters('adminusername')]",
             "adminPassword": "[parameters('adminpassword')]",
-            "linuxConfiguration": {
-              "disablePasswordAuthentication": false,
-              "provisionVMAgent": true
-            },
+            "windowsConfiguration": {
+              "enableAutomaticUpdates": true,
+              "patchSettings": {
+                "assessmentMode": "ImageDefault",
+                "enableHotpatching": false,
+                "patchMode": "AutomaticByOS"
+                },
+              "provisionVmAgent": true
+            },                
             "allowExtensionOperations": true
           },
           "networkProfile": {
