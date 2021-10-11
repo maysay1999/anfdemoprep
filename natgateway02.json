@@ -210,11 +210,6 @@
             "adminPassword": "[parameters('adminpassword')]",
             "windowsConfiguration": {
               "enableAutomaticUpdates": true,
-              "patchSettings": {
-                "assessmentMode": "ImageDefault",
-                "enableHotpatching": false,
-                "patchMode": "AutomaticByOS"
-                },
               "provisionVmAgent": true
             },                
             "allowExtensionOperations": true
