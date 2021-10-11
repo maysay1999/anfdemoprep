@@ -1,0 +1,16 @@
+RG=xxxxxxxxx
+az network vnet subnet create \
+    --resource-group $RG \
+    --name AzureBastionSubnet \
+    --vnet-name  myVnet \
+    --address-prefixes 192.168.82.0/27
+
+az network public-ip create --resource-group $RG \
+    --name mypublic-ip02 \
+    --sku Standard
+
+az network bastion create -g $RG \
+    --name MaysayBastionHost \
+    --public-ip-address mypublic-ip02 \
+    --vnet-name myVnet
+
