@@ -193,27 +193,20 @@
               "sku": "2019-datacenter-gensecond",
               "version": "latest"
             },
-            "osDisk": {
-              "osType": "Windows",
-              "name": "[concat(parameters('vmname'), '_disk1')]",
-              "createOption": "FromImage",
-              "caching": "ReadWrite",
-              "managedDisk": {
-                "storageAccountType": "Premium_LRS"
-              },
-              "diskSizeGB": 128
+          "osDisk": {
+            "createOption": "FromImage",
+            "managedDisk": {
+              "storageAccountType": "StandardSSD_LRS"
             }
           },
-          "osProfile": {
-            "computerName": "[parameters('vmname')]",
-            "adminUsername": "[parameters('adminusername')]",
-            "adminPassword": "[parameters('adminpassword')]",
-            "windowsConfiguration": {
-              "enableAutomaticUpdates": true,
-              "provisionVmAgent": true
-            },                
-            "allowExtensionOperations": true
-          },
+          "dataDisks": [
+            {
+              "diskSizeGB": 1023,
+              "lun": 0,
+              "createOption": "Empty"
+            }
+          ]
+        },
           "networkProfile": {
             "networkInterfaces": [
               {
@@ -221,8 +214,8 @@
               }
             ]
           }
-        }
-      },
+          }
+        },
       {
         "type": "Microsoft.Network/virtualNetworks",
         "apiVersion": "2020-06-01",
