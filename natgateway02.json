@@ -186,6 +186,11 @@
           "hardwareProfile": {
             "vmSize": "[parameters('vmsize')]"
           },
+          "osProfile": {
+          "computerName": "[parameters('vmName')]",
+          "adminUsername": "[parameters('adminUsername')]",
+          "adminPassword": "[parameters('adminPassword')]"
+          },
           "storageProfile": {
             "imageReference": {
               "publisher": "MicrosoftWindowsServer",
@@ -201,7 +206,7 @@
           },
           "dataDisks": [
             {
-              "diskSizeGB": 1023,
+              "diskSizeGB": 256,
               "lun": 0,
               "createOption": "Empty"
             }
